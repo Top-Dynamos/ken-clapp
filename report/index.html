@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<title>Ken Clapp Website Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  /* Layout: a single reading column, banded light and dark the way the racing pages are */
+  :root{
+    --bg:#FFFFFF;
+    --band:#F4F5F6;
+    --ink:#14181C;
+    --muted:#49535A;
+    --line:#DFE3E6;
+    --accent:#9A3412;
+    --onink:#E7EAEC;
+    --lift:#FDBA74;
+    --shell:'Barlow Condensed','Oswald',Impact,sans-serif;
+    --body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0F1317; --band:#161B20; --ink:#ECEFF1; --muted:#A8B2B9; --line:#2A3137;
+      --accent:#FDBA74; --onink:#E7EAEC; --lift:#FDBA74; color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0F1317; --band:#161B20; --ink:#ECEFF1; --muted:#A8B2B9; --line:#2A3137;
+    --accent:#FDBA74; --onink:#E7EAEC; --lift:#FDBA74; color-scheme:dark;
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17.5px;line-height:1.7}
+  .wrap{max-width:720px;margin:0 auto;
+        padding-left:max(16px,env(safe-area-inset-left,0px));
+        padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .top{background:#14181C;color:#fff}
+  .top .wrap{padding-block:56px 50px}
+  .eyebrow{font-family:var(--shell);letter-spacing:.2em;text-transform:uppercase;font-size:14px;color:var(--lift);margin:0 0 12px}
+  .top h1{font-family:var(--shell);font-weight:700;font-size:clamp(36px,8vw,54px);line-height:1.04;margin:0 0 16px;text-wrap:balance}
+  .top p{color:var(--onink);margin:0;font-size:19px}
+  section .wrap{padding-block:50px}
+  .band{background:var(--band)}
+  h2{font-family:var(--shell);font-weight:700;font-size:clamp(27px,5vw,35px);line-height:1.1;margin:0 0 10px;text-wrap:balance;color:var(--ink)}
+  .step{font-family:var(--shell);letter-spacing:.18em;text-transform:uppercase;font-size:13.5px;color:var(--accent);margin:0 0 10px}
+  h3{font-family:var(--shell);font-weight:700;font-size:22px;margin:30px 0 8px;color:var(--ink)}
+  p{margin:0 0 16px}
+  .lead{font-size:20px;color:var(--muted);margin-bottom:24px}
+  ul{margin:0 0 16px;padding-left:22px}
+  li{margin-bottom:10px}
+  .stack{display:flex;flex-direction:column;gap:16px;margin:22px 0}
+  .thing{background:var(--bg);border:1px solid var(--line);border-radius:3px;padding:20px 22px;min-width:0}
+  .thing h4{font-family:var(--shell);font-size:20px;margin:0 0 4px;font-weight:700;color:var(--ink)}
+  .thing .means{color:var(--accent);font-weight:600;margin:0 0 8px;font-size:16px}
+  .thing p:last-child{margin:0;color:var(--muted);font-size:16.5px}
+  .link{display:block;background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--accent);
+        border-radius:0 3px 3px 0;padding:14px 18px;min-width:0}
+  .link b{display:block;font-family:var(--shell);font-size:19px;font-weight:700;margin-bottom:2px;color:var(--ink)}
+  .link a{word-break:break-word}
+  .note{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--accent);
+        padding:16px 20px;color:var(--muted);font-size:16.5px;margin:24px 0;border-radius:0 3px 3px 0}
+  .ask{background:#14181C;color:#fff;padding:24px;border-radius:3px;margin-top:22px}
+  .ask h3{color:var(--lift);margin-top:0}
+  .ask p,.ask li{color:var(--onink)}
+  .foot{background:#14181C;color:var(--onink);font-size:15.5px}
+  .foot .wrap{padding-block:30px}
+  .foot p{margin:0}
+  a{color:var(--accent)}
+  .foot a,.ask a{color:var(--lift)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <p class="eyebrow">Your website and press coverage</p>
+    <h1>Ken Clapp</h1>
+    <p>Plain English. What you have now, what each piece of it does for you, and the two things I need from you.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="step">Before anything else</p>
+    <h2>Why this was built the way it was</h2>
+    <p class="lead">You said your book was an effort to restore the history of racing in the West. That is the same job this website is doing.</p>
+    <p>Most of what I build is for people whose work will be remembered by their industry whether or not anyone writes it down. Yours is different. The tracks you promoted are closed. The crowd of about 3,700 who turned up at Vallejo on the thirty first of July in 1966 are mostly gone. The man who first took you to a race in 1951 is a name almost nobody now recognises. Short track racing in Northern California does not have an archive, and a great deal of what happened out there survives only because people like you kept hold of it.</p>
+    <p>So I did not treat this as another profile page. I read everything that exists about you, including the parts that contradict each other, before I wrote a line. I left your birth date, your home and your family off entirely, because those belong to you and not to the internet. And when I found two different figures for how many events you had promoted, I printed neither, until I found the one you had counted yourself.</p>
+    <p>That is the standard the page is held to, and it is the standard I will keep holding it to.</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="step">First</p>
+    <h2>The problem we started with</h2>
+    <p class="lead">Your name was spread across other people's pages, and they did not agree with each other.</p>
+    <p>Anyone who looked you up found your Wikipedia entry, a couple of press releases, and the website of the hall of fame you chair. Four different places, all written by other people.</p>
+    <p>They contradicted each other. One said you retired as vice president of western operations. Another said senior vice president of marketing development. One dated your hall of fame induction to 2001, another to 2002. Even the name of the track in St. Louis was spelled two different ways.</p>
+    <p>That matters because of who does the looking. A sponsor weighing up an event. A writer checking a fact before it goes to print. A board deciding whether to invite you. They search your name, they read whatever comes up first, and they make up their mind before they ever pick up the phone. Up to now, that first impression was assembled by strangers.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="step">Second</p>
+    <h2>What you have now</h2>
+    <p class="lead">Three things, all live, all yours.</p>
+
+    <div class="stack">
+      <a class="link" href="https://top-dynamos.github.io/ken-clapp/"><b>Your website</b>top-dynamos.github.io/ken-clapp</a>
+      <a class="link" href="https://thedynamotimes.com/press-releases/ken-clapp-nascar-west-coast-motorsports"><b>Your first press release, October</b>The garage at twelve, and carrying NASCAR to the West</a>
+      <a class="link" href="https://thedynamotimes.com/press-releases/ken-clapp-promoter-tracks-hall-of-fame"><b>Your second press release, November</b>Promoting track by track across Northern California</a>
+    </div>
+
+    <h3>What each one does for you</h3>
+    <div class="stack">
+      <div class="thing">
+        <h4>The website</h4>
+        <p class="means">One address you can give to anyone.</p>
+        <p>Sixty years in order, in your own words, on a page nobody else can edit. When somebody asks what you have done, you send one link instead of explaining it again.</p>
+      </div>
+      <div class="thing">
+        <h4>Two press releases</h4>
+        <p class="means">Somebody other than you saying it.</p>
+        <p>A website is you talking about yourself. A press release is a publication putting its name to your record. That is worth more to a sponsor or a reporter, and it is why the two work together rather than repeating each other.</p>
+      </div>
+      <div class="thing">
+        <h4>Every claim double checked</h4>
+        <p class="means">Nobody can catch you out.</p>
+        <p>Before a word was written I read all four of your existing sources side by side and only used what at least two of them agreed on. Where they clashed, I left the claim off rather than pick a winner. If somebody turns up with a different version of your record, yours is the one that holds.</p>
+      </div>
+      <div class="thing">
+        <h4>Pictures right through it</h4>
+        <p class="means">People read to the end instead of giving up.</p>
+        <p>Twelve illustrations, made from your photograph with your approval. The page says plainly that they are illustrations and not photographs of real events, which means nobody can accuse you of passing them off as something they are not.</p>
+      </div>
+      <div class="thing">
+        <h4>Readable on a phone, in ordinary light</h4>
+        <p class="means">Your contemporaries can actually read it.</p>
+        <p>I measured how clearly the text stands out from the background, 234 times, across a computer screen, a phone, and the phone menu. Not one of them was too faint. The people who know your work are reading on a phone, often with tired eyes.</p>
+      </div>
+      <div class="thing">
+        <h4>A message form instead of your address</h4>
+        <p class="means">People can reach you without your email being scraped.</p>
+        <p>Your email address is not printed on the page, so the machines that harvest addresses for junk mail cannot pick it up. Messages still come straight to you.</p>
+      </div>
+    </div>
+
+    <div class="note">Three things were deliberately left off: your date and place of birth, anything about your family, and your home address. All three took me minutes to find, which means anyone can find them. A page that gathers them in one place is a gift to a stranger, so yours does not.</div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="step">Third</p>
+    <h2>Where it stands today</h2>
+    <p class="lead">Everything above is live and checked. Here is what I actually tested, in plain terms.</p>
+    <ul>
+      <li>Every single file on your website matches what I built, nineteen out of nineteen. Nothing was swapped or quietly dropped between my desk and the internet.</li>
+      <li>It works on a computer and on a phone. I checked both, including the menu button.</li>
+      <li>Every picture carries a written description behind the scenes, so software that reads pages aloud to blind readers can describe them.</li>
+      <li>Both press releases are published and reachable right now. I checked them today.</li>
+      <li>Your new achievements page was checked the same way: on a computer and a phone, with every picture loading and the menu working.</li>
+    </ul>
+    <div class="note">One older link is dead. The 2024 release on 24-7PressRelease has been taken down at their end and now leads to an error page. That is outside our control, and it is one more reason the two Dynamo Times releases and your own website matter: those we can keep standing.</div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="step">Fourth</p>
+    <h2>Done today: opening the door to Google</h2>
+    <p class="lead">Your website was telling every search engine to stay away. I found it, and I have fixed it.</p>
+    <p>Two separate instructions on your site were shutting out Google, Bing, and the systems behind ChatGPT and other AI assistants. That is why searching your name did not bring up your own page. It was not a ranking problem. The door was bolted from the inside, and it had been since the site went up.</p>
+    <p>Both are gone now. I also gave the site a map of its own pages so search engines can find everything, listed your six honors in the data they read, and built you a new page that sets out your whole record on its own:</p>
+    <div class="stack">
+      <a class="link" href="../achievements/"><b>Your achievements page</b>Promoter of the Year, four halls of fame, nineteen racetracks, and the races you took to Japan and Mexico</a>
+    </div>
+    <p>What this does for you: when somebody searches your name, there is now something of yours for them to find, and nothing stopping them finding it. Google has to come and look before anything appears, which usually takes somewhere between a few days and a few weeks. Nobody publishes a timetable for that.</p>
+    <p>What I will not do is promise you a particular position in a search result, or promise you what ChatGPT will say about you. Nobody controls either of those, and anyone who tells you otherwise is selling you something. What I can promise is that your facts will be in a form these systems can read, that your sources will agree with each other, and that nothing will be standing in the way.</p>
+
+    <div class="ask">
+      <h3>Two things I need from you</h3>
+      <p><b>One.</b> The first time somebody uses the message form on your website, you will get a single email asking you to confirm it is really your address. Until you click it, messages will not reach you. An enquiry could come in and you would never see it. It takes a second and it only happens once.</p>
+      <p><b>Two.</b> There are two claims I found in only one place, so I have kept them off your website rather than print something that could be challenged. Tell me if they are right and I will add them.</p>
+      <ul>
+        <li>That you are a co-founder of the NASCAR Truck Series</li>
+        <li>That you were the youngest crew chief on the West Coast</li>
+      </ul>
+      <p>The first one matters most. One of my sources opens by calling it the thing you are best known for, and it appears nowhere else I can find. If it is true it belongs on your page, near the top.</p>
+    </div>
+
+    <h3>One last thing</h3>
+    <p>If there is a race, a track, a name or a year you want on that page, tell me and it goes on. You know this history better than any source I can read, and the page should end up sounding like you rather than like a summary of you.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Prepared by <a href="https://www.linkedin.com/in/ranatahirbilal/">Rana Tahir Bilal (John)</a>, Top Dynamos.</p>
+  </div>
+</footer>
+
+</body>
+</html>
