@@ -142,7 +142,7 @@ p{margin:0 0 18px}
 .kc-steps p{margin:0; color:var(--kc-muted); font-size:16.5px}
 
 /* ---------- figures band -------------------------------------------------- */
-.kc-figs{display:grid; grid-template-columns:repeat(4,1fr); gap:34px; text-align:center}
+.kc-figs{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:34px; text-align:center}
 .kc-fig-n{
   font-family:var(--kc-shell); font-weight:700; font-size:clamp(50px,7vw,76px);
   line-height:1; color:var(--kc-acc-lift); margin-bottom:10px;   /* 10.58 on ink */
