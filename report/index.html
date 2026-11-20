@@ -62,6 +62,15 @@
         border-radius:0 3px 3px 0;padding:14px 18px;min-width:0}
   .link b{display:block;font-family:var(--shell);font-size:19px;font-weight:700;margin-bottom:2px;color:var(--ink)}
   .link a{word-break:break-word}
+
+  /* print: a heading must not be left stranded at the foot of a page */
+  @media print{
+    h1,h2,h3{break-after:avoid-page; page-break-after:avoid}
+    .step{break-after:avoid-page; page-break-after:avoid}
+    .step + h2{break-before:auto}
+    .ask,.note,.link,li{break-inside:avoid-page; page-break-inside:avoid}
+    p{orphans:3; widows:3}
+  }
   .note{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--accent);
         padding:16px 20px;color:var(--muted);font-size:16.5px;margin:24px 0;border-radius:0 3px 3px 0}
   .ask{background:#14181C;color:#fff;padding:24px;border-radius:3px;margin-top:22px}
@@ -82,7 +91,7 @@
   <div class="wrap">
     <p class="eyebrow">Your website and press coverage</p>
     <h1>Ken Clapp</h1>
-    <p>Everything you have, what each piece of it does for you, and the two answers I need.</p>
+    <p>Everything you have, what each piece of it does for you, and the one thing I still need.</p>
   </div>
 </header>
 
@@ -177,7 +186,7 @@
 <section>
   <div class="wrap">
     <p class="step">Fourth</p>
-    <h2>Done today: opening the door to Google</h2>
+    <h2>Opening the door to Google</h2>
     <p class="lead">Your website was telling every search engine to stay away. I found it, and I have fixed it.</p>
     <p>Two separate instructions on your site were shutting out Google, Bing, and the systems behind ChatGPT and other AI assistants. That is why searching your name did not bring up your own page. It was not a ranking problem. The door was bolted from the inside, and it had been since the site went up.</p>
     <p>Both are gone now. I also gave the site a map of its own pages so search engines can find everything, listed your six honors in the data they read, and built you a new page that sets out your whole record on its own:</p>
@@ -188,15 +197,23 @@
     <p>What I will not do is promise you a particular position in a search result, or promise you what ChatGPT will say about you. Nobody controls either of those, and anyone who tells you otherwise is selling you something. What I can promise is that your facts will be in a form these systems can read, that your sources will agree with each other, and that nothing will be standing in the way.</p>
 
     <div class="ask">
-      <h3>Two things I need from you</h3>
-      <p><b>One.</b> The first time somebody uses the message form on your website, you will get a single email asking you to confirm it is really your address. Until you click it, messages will not reach you. An enquiry could come in and you would never see it. It takes a second and it only happens once.</p>
-      <p><b>Two.</b> There are two claims I found in only one place, so I have kept them off your website rather than print something that could be challenged. Tell me if they are right and I will add them.</p>
-      <ul>
-        <li>That you are a co-founder of the NASCAR Truck Series</li>
-        <li>That you were the youngest crew chief on the West Coast</li>
-      </ul>
-      <p>The first one matters most. One of my sources opens by calling it the thing you are best known for, and it appears nowhere else I can find. If it is true it belongs on your page, near the top.</p>
+      <h3>One thing I still need from you</h3>
+      <p>The first time somebody uses the message form on your website, you will get a single email asking you to confirm it is really your address. Until you click it, messages will not reach you. An enquiry could come in and you would never see it. It takes a second and it only happens once.</p>
     </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <p class="step">Fifth</p>
+    <h2>The truck series is on your page now</h2>
+    <p class="lead">You told me you co-founded it, so it went on. It is now the thing a stranger learns about you first.</p>
+    <p>Until you confirmed it, the biggest item on your record was missing from your own page. It was the one claim I would not print on a single source, which is why I kept asking.</p>
+    <p>It now has a section of its own: the 1992 conversations with Bill France Jr., the test truck built over the winter of 1993, the first exhibition races in 1994, and the series arriving in 1995, set out year by year. Your own words about how hard it was to sell sit underneath it, with your name on them.</p>
+    <p>It is also in your page title, in the description Google reads, and in the data that search engines and AI assistants pull from, so it travels with your name instead of sitting halfway down a page. Your achievements page carries it in your career record as well.</p>
+    <p>Your line about being the youngest pit crew member on the West Coast is there too, in the 1955 entry, kept word for word the way you said it.</p>
+    <p>One thing I want to be straight with you about. The page says you began those 1992 talks alongside five off road racers from California, because that is how the public record has it. Co-founder stands on its own as a plain statement of fact. I wrote it that way so that anyone who goes checking finds your page and the record saying the same thing, which protects the claim rather than weakens it.</p>
+    <p>What this does for you: the achievement you are best known for is now the one your own page leads with, in a form these systems can read, coming from you rather than from somebody else's summary of you.</p>
 
     <h3>One last thing</h3>
     <p>If there is a race, a track, a name or a year you want on that page, tell me and it goes on. You know this history better than any source I can read, and the page should end up sounding like you rather than like a summary of you.</p>
